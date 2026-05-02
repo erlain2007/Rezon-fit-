@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REZON.FIT | Couture Recyclée</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+        
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+        }
+
+        .rezon-yellow { color: #E5FF00; }
+        .bg-rezon-yellow { background-color: #E5FF00; }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 90vh;
+        }
+
+        .marquee {
+            overflow: hidden;
+            white-space: nowrap;
+            background: #E5FF00;
+            color: black;
+            padding: 10px 0;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+        }
+
+        .product-card img {
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+        }
+
+        .product-card:hover img {
+            filter: grayscale(0%);
+        }
+
+        .custom-input {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid #333;
+            padding: 10px 0;
+            width: 100%;
+            outline: none;
+            color: white;
+        }
+
+        .custom-input:focus {
+            border-bottom: 1px solid #E5FF00;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav class="flex justify-between items-center p-6 border-b border-zinc-900">
+        <div class="text-xl font-black tracking-tighter">REZON.FIT</div>
+        <div class="flex items-center space-x-4">
+            <span class="text-[10px] text-zinc-500 uppercase tracking-widest">[ PARIS — 2024 ]</span>
+            <div class="w-10 h-[1px] bg-white"></div>
+            <i class="fas fa-bars text-lg"></i>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero-section flex flex-col justify-end p-8 md:p-16">
+        <div class="mb-12">
+            <h1 class="text-7xl md:text-9xl font-black italic tracking-tighter leading-none mb-4">
+                RE<span class="rezon-yellow">ZON</span>
+            </h1>
+            <p class="text-zinc-400 text-sm md:text-base max-w-xs mb-8">
+                Photographie × Couture recyclée.<br>
+                <span class="text-white font-bold">Chaque pièce est unique.</span>
+            </p>
+            <div class="flex flex-wrap gap-4">
+                <button class="bg-rezon-yellow text-black font-bold px-8 py-4 uppercase text-xs tracking-widest flex items-center">
+                    Voir la collection <i class="fas fa-arrow-right ml-3"></i>
+                </button>
+                <button class="border border-white text-white font-bold px-8 py-4 uppercase text-xs tracking-widest">
+                    Commander une pièce
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee">
+        <div class="inline-block animate-pulse">
+            REZON FIT PROJECT — COUTURE RECYCLÉE — PHOTOGRAPHIE NARRATIVE — UNIQUE PIECES — SS25 — REZON FIT PROJECT — COUTURE RECYCLÉE
+        </div>
+    </div>
+
+    <!-- COLLECTION SECTION -->
+    <section class="p-8 md:p-16">
+        <div class="mb-12">
+            <span class="rezon-yellow text-[10px] font-bold tracking-widest uppercase">[ SS25 — PIÈCES UNIQUES ]</span>
+            <h2 class="text-4xl font-bold uppercase mt-2">La Collection</h2>
+            <p class="text-zinc-500 text-xs mt-2 italic">8 PIÈCES DISPONIBLES</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            <!-- Product Item -->
+            <div class="product-card">
+                <div class="relative overflow-hidden">
+                    <span class="absolute top-4 left-4 bg-rezon-yellow text-black text-[10px] font-bold px-2 py-1 z-10 uppercase">Unique</span>
+                    <span class="absolute top-4 right-4 text-white text-[10px] font-mono opacity-50">RF-001</span>
+                    <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&q=80" alt="Product" class="w-full aspect-[3/4] object-cover">
+                </div>
+                <div class="mt-4 flex justify-between items-start">
+                    <div>
+                        <h3 class="font-bold uppercase text-sm">Hoodie Camo Patchwork</h3>
+                    </div>
+                    <button class="bg-zinc-900 w-8 h-8 flex items-center justify-center rounded-full hover:bg-rezon-yellow hover:text-black transition">+</button>
+                </div>
+            </div>
+            <!-- Product Item 2 -->
+            <div class="product-card">
+                <div class="relative overflow-hidden">
+                    <span class="absolute top-4 left-4 bg-rezon-yellow text-black text-[10px] font-bold px-2 py-1 z-10 uppercase">Drop SS25</span>
+                    <span class="absolute top-4 right-4 text-white text-[10px] font-mono opacity-50">RF-002</span>
+                    <img src="https://images.unsplash.com/photo-1516762689617-e1cffcef479d?auto=format&fit=crop&q=80" alt="Product" class="w-full aspect-[3/4] object-cover">
+                </div>
+                <div class="mt-4 flex justify-between items-start">
+                    <div>
+                        <h3 class="font-bold uppercase text-sm">Denim Baggy Star</h3>
+                    </div>
+                    <button class="bg-zinc-900 w-8 h-8 flex items-center justify-center rounded-full hover:bg-rezon-yellow hover:text-black transition">+</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORM SECTION -->
+    <section class="p-8 md:p-16 bg-zinc-950">
+        <div class="max-w-2xl">
+            <span class="rezon-yellow text-[10px] font-bold tracking-widest uppercase">[ COMMANDE ]</span>
+            <h2 class="text-4xl font-bold uppercase mt-2 mb-8">Commander</h2>
+            
+            <form class="space-y-10">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <div>
+                        <label class="text-[10px] text-zinc-500 uppercase font-bold">Ton Nom *</label>
+                        <input type="text" class="custom-input" placeholder="NOM COMPLET">
+                    </div>
+                    <div>
+                        <label class="text-[10px] text-zinc-500 uppercase font-bold">Ton Email *</label>
+                        <input type="email" class="custom-input" placeholder="EMAIL@ADRESSE.COM">
+                    </div>
+                </div>
+                <div>
+                    <label class="text-[10px] text-zinc-500 uppercase font-bold">Remarques / Tailles / Personnalisation</label>
+                    <textarea class="custom-input h-32" placeholder="DÉTAILLE TA DEMANDE ICI..."></textarea>
+                </div>
+                <button class="w-full bg-rezon-yellow text-black font-bold py-5 uppercase text-xs tracking-widest flex justify-center items-center">
+                    Envoyer ma commande <i class="far fa-paper-plane ml-3"></i>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="p-8 border-t border-zinc-900 flex justify-between items-center text-zinc-600">
+        <span class="text-[10px] uppercase">© 2024 REZON FIT PROJECT</span>
+        <div class="flex space-x-4 text-xs">
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-tiktok"></i>
+        </div>
+    </footer>
+
+</body>
+</html>
